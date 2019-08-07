@@ -1,0 +1,75 @@
+# Spring boot application
+spring:
+  application:
+    name: subject-service-user-provider
+  datasource:
+    druid:
+      url: jdbc:mysql://127.0.0.1:3306/subject?serverTimezone=CTT&useUnicode=true&characterEncoding=utf-8&useSSL=false
+      username: root
+      password: waxw92999
+      initial-size: 1
+      min-idle: 1
+      max-active: 20
+      test-on-borrow: true
+      driver-class-name: com.mysql.jdbc.Driver
+server:
+  port: 8502
+
+# MyBatis Config properties
+mybatis:
+  type-aliases-package: com.miyako.subject.commons.domain
+  mapper-locations: classpath:mapper/*.xml
+
+# Services Versions
+services:
+  versions:
+    user:
+      v1: 1.0.0
+
+# Dubbo Config properties
+#dubbo:
+#  ## Base packages to scan Dubbo Component：@com.alibaba.dubbo.config.annotation.Service
+#  scan:
+#    basePackages: com.miyako.subject.service.course.provider.api.impl
+#  ## ApplicationConfig Bean
+#  application:
+#    id: subject-service-course-provider
+#    name: subject-service-course-provider
+#    qos-port: 22222
+#    qos-enable: true
+#  ## ProtocolConfig Bean
+#  protocol:
+#    id: dubbo
+#    name: dubbo
+#    port: 20881
+#    status: server
+#    serialization: kryo
+#  ## RegistryConfig Bean
+#  registry:
+#    id: zookeeper
+#    address: zookeeper://127.0.0.1:2181
+##    address: zookeeper://192.168.10.131:2181?backup=192.168.10.131:2182,192.168.10.131:2183
+#
+## Enables Dubbo All Endpoints
+#management:
+#  endpoint:
+#    dubbo:
+#      enabled: true
+#    dubbo-shutdown:
+#      enabled: true
+#    dubbo-configs:
+#      enabled: true
+#    dubbo-services:
+#      enabled: true
+#    dubbo-references:
+#      enabled: true
+#    dubbo-properties:
+#      enabled: true
+#  # Dubbo Health
+#  health:
+#    dubbo:
+#      status:
+#        ## StatusChecker Name defaults (default : "memory", "load" )
+#        defaults: memory
+#        ## StatusChecker Name extras (default : empty )
+#        extras: load,threadpool
