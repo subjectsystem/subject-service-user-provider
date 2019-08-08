@@ -12,7 +12,7 @@
 
     <dubbo:registry protocol="zookeeper"  address="zookeeper://127.0.0.1:2181"/>
 
-    <dubbo:protocol name="dubbo" port="20881"/>
+    <dubbo:protocol name="dubbo" port="20882"/>
 
     <dubbo:annotation package="com.miyako.subject.service.user.provider.api.impl"/>
 
