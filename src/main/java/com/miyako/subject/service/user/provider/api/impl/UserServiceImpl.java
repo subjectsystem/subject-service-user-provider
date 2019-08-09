@@ -45,6 +45,12 @@ public class UserServiceImpl implements TbUserService{
     }
 
     @Override
+    public TbStudent selectOne(TbStudent tbStudent){
+        logger.info("===>:UserServiceImpl select one...");
+        return tbStudentMapper.selectOne(tbStudent);
+    }
+
+    @Override
     public Integer insert(TbStudent tbStudent){
         logger.info("===>:UserServiceImpl insert...");
         return tbStudentMapper.insert(tbStudent);
