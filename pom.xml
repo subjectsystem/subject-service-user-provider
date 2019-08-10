@@ -42,6 +42,11 @@
         </dependency>
         <dependency>
             <groupId>com.miyako</groupId>
+            <artifactId>subject-service-redis-api</artifactId>
+            <version>${project.parent.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>com.miyako</groupId>
             <artifactId>subject-service-user-api</artifactId>
             <version>${project.parent.version}</version>
         </dependency>

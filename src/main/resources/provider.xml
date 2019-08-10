@@ -16,6 +16,8 @@
 
     <dubbo:annotation package="com.miyako.subject.service.user.provider.api.impl"/>
 
+    <dubbo:annotation package="com.miyako.subject.service.redis.api"/>
+
     <!--<dubbo:annotation package="com.miyako.seckillsystem.redis"/>-->
     <!-- service implementation, as same as regular local bean -->
     <!--<bean id="courseServiceImpl" class="com.miyako.subject.service.course.provider.api.impl.CourseServiceImpl"/>-->

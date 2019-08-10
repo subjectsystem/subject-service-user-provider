@@ -26,6 +26,7 @@ public class Test{
 
     @org.junit.Test
     public void insertStudent(){
+        logger.info("test............嘎达嘎达嘎达是公开的萨芬撒旦发个.........");
         //Random random = new Random();
         //for (int i=3; i<2001; i++){
         //    TbStudent tbStudent = new TbStudent();
