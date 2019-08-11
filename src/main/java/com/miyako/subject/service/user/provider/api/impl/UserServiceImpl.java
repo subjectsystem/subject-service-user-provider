@@ -61,7 +61,19 @@ public class UserServiceImpl implements TbUserService{
     @MethodLog(value = "UserServiceImpl", operationType = "数据库访问", operationName = "selectAll")
     public Integer insert(TbStudent tbStudent){
         logger.info("===>:UserServiceImpl insert...");
-        return tbStudentMapper.insert(tbStudent);
+        int i = tbStudentMapper.insert(tbStudent);
+        return i>=1?tbStudent.getId():i;
+    }
+
+    @Override
+    public List<TbStudent> selectList(TbStudent tbStudent){
+        logger.info("===>:UserServiceImpl select list by example...");
+        Example example = new Example(TbStudent.class);
+        example.createCriteria()
+               .andEqualTo("id", tbStudent.getId())
+               .andEqualTo("collegeid", tbStudent.getCollegeid())
+               .andEqualTo("name", tbStudent.getName());
+        return tbStudentMapper.selectByExample(example);
     }
 
     @Override

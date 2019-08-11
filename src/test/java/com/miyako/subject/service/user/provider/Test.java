@@ -1,6 +1,8 @@
 package com.miyako.subject.service.user.provider;
 
 import com.alibaba.dubbo.config.annotation.Reference;
+import com.miyako.subject.commons.domain.TbStudent;
+import com.miyako.subject.commons.utils.MD5Util;
 import com.miyako.subject.service.user.api.TbUserService;
 import org.junit.runner.RunWith;
 import org.slf4j.Logger;
@@ -37,6 +39,20 @@ public class Test{
         //    tbStudent.setPassword(MD5Util.MD5Encode("111111"));
         //    logger.info(tbUserService.insert(tbStudent).toString());
         //}
+    }
+
+    @org.junit.Test
+    public void insertStudentById(){
+        logger.info("test............嘎达嘎达嘎达是公开的萨芬撒旦发个.........");
+        //TbStudent tbStudent = new TbStudent();
+        //tbStudent.setName("测试学生11-");
+        //tbStudent.setAge(18);
+        //tbStudent.setGender(1);
+        //tbStudent.setCollegeid(1);
+        //tbStudent.setPassword(MD5Util.MD5Encode("111111"));
+        ////logger.info("insert:"+tbUserService.insert(tbStudent).toString());
+        //logger.info("insert selective:"+ tbUserService.insertById(tbStudent).toString());
+        //logger.info("id:"+tbStudent.getId());
     }
 
 }
